@@ -4,7 +4,7 @@ from PIL import Image
 from ultralytics import YOLO
 
 # Load the pre-trained YOLOv8 model
-model = YOLO('best_hm.pt')  # Ensure the path to your model is correct
+model = YOLO('best_hm.pt',device="cpu")  # Ensure the path to your model is correct
 
 def detect_objects(image):
     # Convert the PIL image to a NumPy array
